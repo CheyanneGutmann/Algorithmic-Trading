@@ -1,7 +1,7 @@
-#Algorithmic Trading with Machine Learning
+!Algorithmic Trading with Machine Learning
 
 #imports
-from time import *
+from time import !
 from sklearn import tree
 import datetime as dt
 import matplotlib.pyplot as plt
@@ -21,7 +21,7 @@ def algo(t):
     labels = []
 
     for i in range(len(t) - acc + 1):
-        features.append(t[-1*acc:-1])
+        features.append(t[-1 acc:-1])
 
         #1 means price went up
         if t[-1] > t[-2]:
@@ -32,7 +32,7 @@ def algo(t):
     clf = tree.DecisionTreeClassifier()
     clf.fit(features, labels)
 
-    if clf.predict(t[-1*acc+1:])[0] == 1:
+    if clf.predict(t[-1#acc+1:])[0] == 1:
         return 1
     else:
         return 0
@@ -112,3 +112,4 @@ print("Performance: " + str(round(100 * CashRecords[-1] * Points[0] / (Points[-1
 
 plt.plot(dates, CashRecords, color='blue')
 plt.show()
+ 
